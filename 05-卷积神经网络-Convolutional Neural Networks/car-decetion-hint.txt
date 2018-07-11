@@ -10,3 +10,14 @@ A couple of gentle reminders:
 In the extreme, one could hard code a solution that only works with precisely one set of inputs, such as the box1 = (2,1,4,2) and box2 = (1,2,3,4) test case example in this notebook. But it would fail in a different, more general, case. For example, if the boxes didn't overlap at all, or if the labels for box1 and box2 were inverted.
 
 In this case, the hint in the Exercise: alludes to this consideration of the more general case "...you need to make sure the height and width of the intersection are positive, otherwise the intersection area should be zero. Use max(height, 0) and max(width, 0)." and the grader expects that to be adhered to.
+
+
+after trying almost 15 submissions (I was desperate), the correct code that worked for me was:
+
+Use the min and max build-in functions of Python.
+Set max(xi2 - xi1, 0) * max(yi2 - yi1, 0) only for the inter_area. In box1_area and box2_area just do the subtraction and multiplication, without the max function.
+Do not convert anything to float.
+Do not think anything about intersection, non-intersection, overlapping or non-overlapping possibilities, just do the basic.
+
+
+inter_area = np.multiply(np.maximum(yi2-yi1,0), np.maximum(xi2-xi1,0))
