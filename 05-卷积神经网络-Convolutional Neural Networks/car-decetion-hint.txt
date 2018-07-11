@@ -1,0 +1,12 @@
+Md.Rijoan Rabbi · 9 days ago
+You can use this function here :"inter_area = (max(yi2-yi1,0)* max(xi2-xi1,0)) " always use only max() function instead of np.max() or other.
+
+A couple of gentle reminders:
+
+1) solutions ought not be posted in the forum according to Coursera honor code
+
+2) matching expected output is necessary, but not always sufficient, to satisfy the grader
+
+In the extreme, one could hard code a solution that only works with precisely one set of inputs, such as the box1 = (2,1,4,2) and box2 = (1,2,3,4) test case example in this notebook. But it would fail in a different, more general, case. For example, if the boxes didn't overlap at all, or if the labels for box1 and box2 were inverted.
+
+In this case, the hint in the Exercise: alludes to this consideration of the more general case "...you need to make sure the height and width of the intersection are positive, otherwise the intersection area should be zero. Use max(height, 0) and max(width, 0)." and the grader expects that to be adhered to.
